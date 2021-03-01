@@ -1,16 +1,16 @@
-/*Fazer um algoritmo que leia 3 valores e retorne se os valores formam um triângulo e se ele é
-isóceles, escaleno ou equilátero.
-Condições para formar um triângulo
+/*Fazer um algoritmo que leia 3 valores e retorne se os valores formam um triÃ¢ngulo e se ele Ã©
+isÃ³celes, escaleno ou equilÃ¡tero.
+CondiÃ§Ãµes para formar um triÃ¢ngulo
 	Nenhum valor pode ser = 0
-	Um lado não pode ser maior que a soma dos outros 2.
+	Um lado nÃ£o pode ser maior que a soma dos outros 2.
 */
 DECLARE @valor1 INT,
 		@valor2 INT,
 		@valor3 INT
 
-SET @valor1 = 3
+SET @valor1 = 4
 SET @valor2 = 3
-SET @valor3 = 6
+SET @valor3 = 2
 
 IF ((@valor1 + @valor2) >= @valor3 AND (@valor1 + @valor3) >= @valor2 AND (@valor2 + @valor3) >= @valor1
 	AND @valor1 != 0 AND @valor2 != 0 AND @valor3 !=0)
@@ -21,7 +21,7 @@ BEGIN
 	END
 	ELSE IF (@valor1 = @valor2 OR @valor1 = @valor3 OR @valor2 = @valor3)
 	BEGIN
-		PRINT 'isóceles'
+		PRINT 'isÃ³celes'
 	END
 	ELSE
 	BEGIN
@@ -33,35 +33,35 @@ BEGIN
 	PRINT 'ENTRADA INVALIDA'
 END
 
--- Fazer um algoritmo que, dado 1 número, mostre se é múltiplo de 2,3,5 ou nenhum deles
+-- Fazer um algoritmo que, dado 1 nÃºmero, mostre se Ã© mÃºltiplo de 2,3,5 ou nenhum deles
 
 DECLARE @valor INT
-SET @valor = 250
+SET @valor = 123
 
 PRINT @valor
 
 IF (@valor%2 = 0)
 BEGIN
-	PRINT 'É MULTIPLO DE 2'
+	PRINT 'Ã‰ MULTIPLO DE 2'
 END
 IF (@valor%3 = 0)
 BEGIN
-	PRINT  'É MULTIPLO DE 3'
+	PRINT  'Ã‰ MULTIPLO DE 3'
 END
 IF (@valor%5 = 0)
 BEGIN
-	PRINT 'É MULTIPLO DE 5'
+	PRINT 'Ã‰ MULTIPLO DE 5'
 END
 
--- Fazer um algoritmo que, dados 3 números, mostre o maior e o menor
+-- Fazer um algoritmo que, dados 3 nÃºmeros, mostre o maior e o menor
 DECLARE @valor1 INT,
 		@valor2 INT,
 		@valor3 INT,
 		@maior INT,
 		@menor INT
-SET @valor1 = 10
-SET @valor2 = 20
-SET @valor3 = 15
+SET @valor1 = 7
+SET @valor2 = 21
+SET @valor3 = 16
 
 SET @maior = @valor1
 IF (@maior > @valor2 AND @maior > @valor3)
@@ -87,9 +87,9 @@ BEGIN
 	SET @menor = @valor3
 END
 
-PRINT CAST(@maior AS VARCHAR(10))+' É O MAIOR VALOR E '+ CAST(@menor AS VARCHAR(10))+ ' É O MENOR VALOR'
+PRINT CAST(@maior AS VARCHAR(10))+' Ã‰ O MAIOR VALOR E '+ CAST(@menor AS VARCHAR(10))+ ' Ã‰ O MENOR VALOR'
 
--- Fazer um algoritmo que calcule os 15 primeiros termos da série de Fibonacci e a soma dos 15 primeiros termos
+-- Fazer um algoritmo que calcule os 15 primeiros termos da sÃ©rie de Fibonacci e a soma dos 15 primeiros termos
 
 DECLARE @cont INT,
 		@anterior1 INT,
@@ -108,7 +108,7 @@ BEGIN
 	SET @cont = @cont + 1
 END
 
--- Fazer um algoritmo que separa uma frase, imprimindo todas as letras em maiúsculo e, depois imprimindo todas em minúsculo
+-- Fazer um algoritmo que separa uma frase, imprimindo todas as letras em maiÃºsculo e, depois imprimindo todas em minÃºsculo
 
 DECLARE @frase VARCHAR(100)
 DECLARE	@cont INT
@@ -147,7 +147,7 @@ END
 PRINT @saida
 
 
--- Fazer um algoritmo que verifica, dada uma palavra, se é, ou não, palíndromo
+-- Fazer um algoritmo que verifica, dada uma palavra, se Ã©, ou nÃ£o, palÃ­ndromo
 
 DECLARE @frase VARCHAR(100),
 		@cond BIT,
@@ -155,7 +155,7 @@ DECLARE @frase VARCHAR(100),
 
 SET @cont = 1
 SET @cond = 1
-SET @frase = 'omissíssimo'
+SET @frase = 'omissÃ­ssimo'
 
 WHILE(@cont <= FLOOR(LEN(@frase)/2))
 BEGIN
@@ -168,14 +168,14 @@ END
 
 IF (@cond = 0)
 BEGIN
-	PRINT 'NÃO É PALINDROMO'
+	PRINT 'NÃƒO Ã‰ PALINDROMO'
 END
 ELSE
 BEGIN
-	PRINT 'É PALINDROMO'
+	PRINT 'Ã‰ PALINDROMO'
 END
 
--- Fazer um algoritmo que, dado um CPF diga se é válido
+-- Fazer um algoritmo que, dado um CPF diga se Ã© vÃ¡lido
 
 DECLARE @cpf VARCHAR(11),
 		@valido BIT,
@@ -184,7 +184,7 @@ DECLARE @cpf VARCHAR(11),
 		@res INT,
 		@aux INT
 
-SET @cpf = '22233344455'
+SET @cpf = '12345567713'
 SET @valido = 1
 SET @aux = 1
 
